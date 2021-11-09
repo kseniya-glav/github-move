@@ -1,0 +1,209 @@
+@import "_fonts.css";
+
+/* For debug */
+:root{
+    /*межстрочный интервал*/
+    --line-spacing: 1.25;
+    /*шрифт*/
+    --font-family: 'Open Sans', sans-serif;
+    /*размеры шрифта*/
+    --normal-font-size: 16px;
+    --big-font-size: 1.25rem;
+    --small-font-size: 0.75rem;
+    /*цвета*/
+    --color-gray: #96A1AB;
+    --color-dark: #282E3A;
+    --color-light-gray: #ECECEC;
+    --color-blue-gray: #3D4957;
+    --color-beige: #DBC7A6;
+    /*максимальный размер основной части сайта*/
+    --max-main: 1128px;
+    /*отступы*/
+    --indentation-base: 1rem;
+    --indentation-large: 1.5rem;
+    --indentation-small: 0.5rem;
+    --indentation-very-small: 0.25rem;
+    /*радиус скругления рамок*/
+    --rounding-radius-base: 0.5rem;
+    --rounding-radius-small: 0.25rem;
+    /*размеры аватара*/
+    --avatar-size: 2.25rem; 
+  }
+
+* {
+    box-sizing: border-box;
+    line-height: var(--line-spacing);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+html {  
+    font-size: var(--normal-font-size);
+}
+
+a {
+    color: var(--color-gray);
+}
+
+h1, .cat-name {
+    display: block;
+    font-size: var(--big-font-size);
+    font-weight: normal;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    width: 100%;
+    min-width: 100vw;
+
+    background: var(--color-light-gray);
+    color: var(--color-gray);
+}
+
+/* Основное содержимое страницы */
+.content {
+    max-width: var(--max-main);
+    width: 100%;
+
+    display: flex;
+
+    margin: 0 auto 0 auto;
+}
+
+/******* ХЭДЕР *******/
+.header {
+    background: #2A2A3A;
+}
+
+.header > .content {
+    padding-top: var(--indentation-base);
+    padding-bottom: var(--indentation-base);
+}
+
+.header a {
+    padding: var(--indentation-base);
+    text-decoration: none;
+}
+
+.header a.active {
+    background: var(--color-light-gray);
+}
+
+.header a:last-child {
+    padding: var(--indentation-base) 0 var(--indentation-base) var(--indentation-base);
+}
+
+.name {
+    min-width: calc(100% / 6);
+    margin-right: var(--indentation-base);
+    color: var(--color-light-gray);
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/******* ОСНОВНАЯ ЧАСТЬ *******/
+.main {
+    flex: 1 0 auto;
+    padding-top: var(--indentation-base); 
+}
+
+.menu > h1 {
+    margin-bottom: var(--indentation-large);
+}
+
+.menu {
+    min-width: calc(100% / 6);
+    margin-right: var(--indentation-base);
+}
+
+.menu a {
+    display: block;
+    width: 100%;
+    padding-left: var(--indentation-base);
+    margin-bottom: var(--indentation-small);
+    text-decoration: none;
+}
+
+.menu a.active {
+    background: var(--color-dark);
+    border-radius: var(--rounding-radius-small);
+    color: var(--color-light-gray);
+    padding: var(--indentation-small) var(--indentation-base);
+}
+
+.messages-box > h1 {
+    margin-bottom: var(--indentation-base);
+}
+
+.message {
+    position: relative;
+    margin-bottom: var(--indentation-base);
+    padding: var(--indentation-base);
+    background: var(--color-blue-gray);
+    border-radius: var(--rounding-radius-base);
+}
+
+.message > time {
+    position: absolute;
+    top: var(--indentation-base);
+    right: var(--indentation-base);
+    font-size: var(--small-font-size);
+}
+
+.message h1, .message .cat-name {
+    color: var(--color-beige);
+}
+
+.message h2 {
+    display: inline-block;
+    font-size: var(--big-font-size);
+    font-weight: normal;
+    margin-bottom: var(--indentation-very-small);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--indentation-very-small);
+}
+
+.cat-image {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    margin-right: var(--indentation-small);
+    border-radius: 50%; 
+}
+
+/******* ФУТЕР *******/
+
+.footer {
+    width: 100%;
+
+    background: var(--color-dark);
+}
+
+.footer > .content {
+    padding-top: var(--indentation-large);
+    padding-bottom: var(--indentation-large);
+    justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 100%;
+        padding: 0 var(--indentation-base) 0 var(--indentation-base);
+    }
+}

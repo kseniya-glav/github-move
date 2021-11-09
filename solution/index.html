@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мини-почта</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+  <!-- Место решения -->
+  <div class="page">
+    <header class="header">
+       <div class="content">
+           <div class="name">
+               <span>Мини-почта</span>
+           </div>
+           <nav class="nav">
+               <div>
+                   <a href="#" class="active">Письма</a>
+                   <a href="#">Написать</a>
+               </div>
+               <div>
+                   <a href="#">@username</a>
+                   <a href="#">Выход</a>
+               </div>
+           </nav>
+       </div>
+   </header>
+
+   <div class="main">
+       <div class="content">
+           <aside class="menu">
+               <h1>Письма</h1>
+               <ul>
+                   <li> <a href="#">Непрочитанные</a> </li>
+                   <li> <a href="#" class="active">Входящие</a> </li>
+                   <li> <a href="#">Отправленные</a> </li>
+               </ul>
+           </aside>
+
+           <main class="messages-box">
+               <h1>Входящие</h1>
+
+               <article class="message">
+                   <time datetime="2020-08-28">28.08.2020</time>
+                   <p class="user">
+                       <img class="cat-image" src="images/avatar-1.png"/>
+                       <span class="cat-name">Barsik2007</span>
+                   </p>
+                   <h2>Собрание всех котиков</h2>
+                   <p>Всем привет! Пересылаю распоряжение об организации всеобщего собрания.</p>
+               </article>
+
+               <article class="message">
+                   <time datetime="2020-08-28">28.08.2020</time>
+                   <p class="user">
+                       <img class="cat-image" src="images/avatar-2.png"/>
+                       <span class="cat-name">Judith</span>
+                   </p>
+                   <h2>Красная точка</h2>
+                   <p>Всем мяу! Сегодня утром была найдена красная точка на кухне. Я гналась за ней больше часа, но она сбежала. Продолжаю наблюдение. В этот раз она не уйдёт. Думаю, надо ещё раз проверить под холодильником. Всё, я убежала, тут опять бегает солнечное пятно!</p>
+               </article>
+
+               <article class="message">
+                   <time datetime="2020-08-26">26.08.2020</time>
+                   <p class="user">
+                       <img class="cat-image" src="images/avatar-3.png"/>
+                       <span class="cat-name">angry_boss</span>
+                   </p>
+                   <h2>Еда?</h2>
+                   <p>Нам надо что-то делать с нехваткой еды! Я голодаю... Я так больше не могу...</p>
+               </article>
+
+</main>
+</div>
+</div>
+
+<footer class="footer">
+    <div class="content">
+    <span>(C) Курс Web-программирования | ПГНИУ</span>
+    </div>
+</footer>
+
+  <!-- For debug -->
+  <div class="grid">
+    <div class="grid__column">
+      <div class="grid__sub-column" style="left: -1rem"></div>
+      <div class="grid__sub-column" style="left: 0"></div>
+    </div>
+    <div class="grid__column"></div>
+    <div class="grid__column">
+      <div class="grid__sub-column" style="left: 0"></div>
+    </div>
+    <div class="grid__column"></div>
+    <div class="grid__column"></div>
+    <div class="grid__column"></div>
+    <div class="grid__column"></div>
+    <div class="grid__column"></div>
+    <div class="grid__column"></div>
+    <div class="grid__column"></div>
+    <div class="grid__column"></div>
+    <div class="grid__column">
+      <div class="grid__sub-column" style="right: 0"></div>
+      <div class="grid__sub-column" style="right: -1rem"></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
